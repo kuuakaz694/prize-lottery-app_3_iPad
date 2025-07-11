@@ -1,0 +1,132 @@
+/* 全体の文字や背景の初期設定 */
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #274eb9; /* 背景を青っぽくして、さわやかな印象にしてるよ */
+  color: white; /* 文字は白っぽく、見やすくしてるよ */
+}
+
+/* ボタンの基本デザイン */
+button {
+  margin: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: white;
+  color: #a64027;
+  border: 2px solid #a64027;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* 少し浮き上がる影をつけてるよ */
+  transition: all 0.3s ease; /* ホバー時にふわっと動くように */
+  cursor: pointer;
+}
+
+/* ボタンにカーソルを乗せたときの変化 */
+button:hover {
+  background-color: #f9f9f9;
+}
+
+/* 抽選スタートボタンの色変化（有効時） */
+button.active, #start-button:not(:disabled) {
+  background-color: #a64027;
+  color: white;
+}
+
+/* ヘッダー画像やフッター画像を全幅に */
+.header-img, .footer-img {
+  width: 100%;
+}
+
+/* コースボタンたちを中央寄せ＆複数行対応で並べる */
+#course-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* コースボタンをちょっと細長く、オシャレに */
+.course-button {
+  width: 60vw; /* 画面の幅の60%ぐらい */
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* スタートボタンのサイズ＆配置 */
+#start-button {
+  margin: 20px auto;
+  padding: 14px 32px;
+  font-size: 20px;
+  display: block;
+}
+
+/* ユーティリティボタン（景品登録・在庫・削除）の並びとサイズ調整 */
+#utility-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#utility-buttons button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+/* 表のスタイル：中央・白背景・角丸など */
+table {
+  margin: auto;
+  border-collapse: collapse;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* 表の枠線と内側パディング */
+td, th {
+  border: 1px solid #aaa;
+  padding: 8px;
+}
+
+/* フッター画像を画面下に固定してるよ */
+.footer-img {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* 🎵 iOS（iPad/iPhone）で音が鳴らない問題の対策！ */
+
+/* 抽選アニメの画面サイズをちゃんと画面全体にしておく */
+#anime-screen {
+  min-height: 100vh;
+}
+
+/* iPad Safariで背景が見えない不具合対策！ */
+#anime-screen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: -1;
+}
+
+#result-image {
+  max-width: 60%;       /* 画像の最大幅を60%にして少し小さめに */
+  display: none;
+  margin: 10px auto 0;  /* 上マージン10px、左右自動で中央寄せ */
+  display: block;       /* ブロック要素にして中央寄せが効くように */
+}
