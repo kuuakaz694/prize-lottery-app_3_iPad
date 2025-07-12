@@ -102,8 +102,9 @@ td, th {
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 0;
 }
+
 
 /* 🎵 iOS（iPad/iPhone）で音が鳴らない問題の対策！ */
 
@@ -125,7 +126,7 @@ td, th {
 }
 
 #result-image {
-  max-width: 60%;       /* 画像の最大幅を60%にして少し小さめに */
+  max-width: 40%;       /* 画像の最大幅を60%にして少し小さめに */
   display: none;
   margin: 10px auto 0;  /* 上マージン10px、左右自動で中央寄せ */
   display: block;       /* ブロック要素にして中央寄せが効くように */
